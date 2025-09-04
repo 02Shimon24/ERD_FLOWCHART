@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+/* Button style */
+#drawerToggle {
+  position: fixed;
+  top: 20%;
+  left: 0;
+  transform: translateY(-50%);
+  padding: 10px 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Drawer panel */
+#sideDrawer {
+  position: fixed;
+  top: 0;
+  right: -300px; /* hidden off screen */
+  width: 300px;
+  height: 100%;
+  background: #f9f9f9;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* Drawer active state */
+#sideDrawer.active {
+  right: 0; /* slide into view */
+}
+
+/* Button attached to drawer */
+#drawerToggle {
+  position: absolute;
+  top: 20%;
+  left: -25%;   /* sticks out from drawer edge */
+  padding: 10px 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  cursor: pointer;
+}
+
+/* Drawer button */
+.drawer-btn {
+  position: fixed;
+  top: 20%;
+  left: 0;
+  z-index: 1100;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+
+.textarea-container{
+    display: grid;
+}

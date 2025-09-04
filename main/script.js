@@ -144,3 +144,20 @@ let mermaid;
     }
 
     window.generateERD = generateERD;
+// Side drawer toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const drawerBtn = document.getElementById("drawerToggle");
+  const sideDrawer = document.getElementById("sideDrawer");
+
+  console.log("drawerBtn:", drawerBtn);
+  console.log("sideDrawer:", sideDrawer);
+
+  if (drawerBtn && sideDrawer) {
+    drawerBtn.addEventListener("click", () => {
+      console.log("Button clicked!");
+      sideDrawer.classList.toggle("active");
+    });
+  } else {
+    console.error("Drawer button or drawer not found in DOM");
+  }
+});

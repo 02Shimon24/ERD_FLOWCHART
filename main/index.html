@@ -4,11 +4,37 @@
 
   <meta charset="UTF-8">
   <title>ERD Generator</title>
-  <script src="script.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
+<script src="script.js"></script>
+
   <body>
-    <h2>ERD Generator</h2>
+    <header>
+      <div>
+        <h2>ERD Generator</h2>
+      </div>
+    </header>
+    
+   
+    <br><br>
+
+    
+
+    <h3>Diagram:</h3>
+    <div id="diagram" style="margin-top:20px;"></div>
+
+    <h3>Raw Mermaid text (debugging):</h3>
+    <pre id="raw" style="background:#eee; padding:10px;"></pre>
+
+
+    <!-- Side Drawer -->
+    <!-- Side Drawer with Handle -->
+    <div id="sideDrawer">
+      <button id="drawerToggle" class="drawer-btn">☰ Input</button>
+      <h3>User Input Area</h3>
+
+
+ <div class="textarea-container">
     <p>Enter your business rules (plain English, one per line):</p>
     <textarea id="rules" rows="10" cols="70">
       A game has game_id, title, genre, release_date.
@@ -36,15 +62,14 @@
       Each weapon can be found in many levels.
       Each skill can be used in many levels.
     </textarea>
-
-    <br><br>
-
     <button onclick="generateERD()">Generate ERD</button>
+    </div>
 
-    <h3>Diagram:</h3>
-    <div id="diagram" style="margin-top:20px;"></div>
+    </div>
 
-    <h3>Raw Mermaid text (debugging):</h3>
-    <pre id="raw" style="background:#eee; padding:10px;"></pre>
+
+
+
+
   </body>
 </html>

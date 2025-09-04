@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <title>ERD Generator</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    <h2>ERD Generator</h2>
+    <p>Enter your business rules (plain English, one per line):</p>
+    <textarea id="rules" rows="10" cols="70">
+      A game has game_id, title, genre, release_date.
+      A player has player_id, username, level, health, mana.
+      An enemy has enemy_id, name, type, health, damage.
+      An item has item_id, name, effect, value.
+      A weapon has weapon_id, name, damage, range.
+      A skill has skill_id, name, mana_cost, cooldown.
+      A quest has quest_id, title, reward, is_completed.
+      A level has level_id, name, difficulty, environment.
+      A npc has npc_id, name, role.
+
+      Each game must have one player.
+      Each game can have many levels.
+      Each level must belong to one game.
+      Each level can have many enemies.
+      Each level can contain many items.
+      Each player can learn many skills.
+      Each player can use many weapons.
+      Each player can complete many quests.
+      Each quest must be assigned to one player.
+      Each enemy must belong to one level.
+      Each npc can give many quests.
+      Each item can be found in many levels.
+      Each weapon can be found in many levels.
+      Each skill can be used in many levels.
+    </textarea>
+
+    <br><br>
+
+    <button onclick="generateERD()">Generate ERD</button>
+
+    <h3>Diagram:</h3>
+    <div id="diagram" style="margin-top:20px;"></div>
+
+    <h3>Raw Mermaid text (debugging):</h3>
+    <pre id="raw" style="background:#eee; padding:10px;"></pre>
+  </body>
+</html>
